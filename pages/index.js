@@ -6,12 +6,10 @@ const Home = () => (
       <title>Prueba de SEO JsonLD | EU</title>
       <link rel="icon" href="/favicon.ico" />
       <script type="application/ld+json">
-
       {
         "@context": "http://schema.org/",
         "@type": "Person",
-        "name": "Douglas Natha Arias",
-        "url": "http://manu.sporny.org/about/"
+        "name": "Douglas Natha Arias"
       }
       </script>
 
