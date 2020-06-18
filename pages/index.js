@@ -1,17 +1,39 @@
 import Head from "next/head";
 
+const JsonLd = ({ data }) => (
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+  />
+);
+
+const articleData = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  name: "Noticia Viernes 13 del Universo",
+  description:
+    "Viernes 13: Stephen King, el rey del terror, está interesado en escribir una novela sobre el psicópata enmascarado Jason Voorhees",
+  author: "Douglas Natha",
+  about: {
+    "@type": "Event",
+    name: "Apple's March 21 Announcements",
+  },
+  url:
+    "https://www.eluniverso.com/entretenimiento/2020/06/17/nota/7875657/terror-stephen-king-idea-novela-jason-voorhees-viernes-13",
+};
+
+const personData = {
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  name: "Douglas Natha Arias",
+};
+
 const Home = () => (
   <div className="container">
     <Head>
       <title>Prueba de SEO JsonLD | EU</title>
       <link rel="icon" href="/favicon.ico" />
-      <script type="application/ld+json">
-        {{
-          "@context": "https://schema.org/",
-          "@type": "Person",
-          name: "Douglas Natha Arias",
-        }}
-      </script>
+      <JsonLd data={personData} />
     </Head>
 
     <main>
@@ -25,22 +47,7 @@ const Home = () => (
 
       <div className="grid">
         <div>
-          <script type="application/ld+json">
-            {{
-              "@context": "https://schema.org",
-              "@type": "Article",
-              name: "Noticia Viernes 13 del Universo",
-              description:
-                "Viernes 13: Stephen King, el rey del terror, está interesado en escribir una novela sobre el psicópata enmascarado Jason Voorhees",
-              author: "Douglas Natha",
-              about: {
-                "@type": "Event",
-                name: "Apple's March 21 Announcements",
-              },
-              url:
-                "https://www.eluniverso.com/entretenimiento/2020/06/17/nota/7875657/terror-stephen-king-idea-novela-jason-voorhees-viernes-13",
-            }}
-          </script>
+          <JsonLd data={articleData} />
           <a
             href="https://www.eluniverso.com/entretenimiento/2020/06/17/nota/7875657/terror-stephen-king-idea-novela-jason-voorhees-viernes-13"
             className="card"
