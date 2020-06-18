@@ -7,7 +7,7 @@ const Home = () => (
       <link rel="icon" href="/favicon.ico" />
       <script type="application/ld+json">
       {
-        "@context": "http://schema.org/",
+        "@context": "https://schema.org/",
         "@type": "Person",
         "name": "Douglas Natha Arias"
       }
