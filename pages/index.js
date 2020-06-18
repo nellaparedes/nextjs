@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 const Home = () => (
   <div className="container">
@@ -6,13 +6,12 @@ const Home = () => (
       <title>Prueba de SEO JsonLD | EU</title>
       <link rel="icon" href="/favicon.ico" />
       <script type="application/ld+json">
-      {
-        "@context": "https://schema.org/",
-        "@type": "Person",
-        "name": "Douglas Natha Arias"
-      }
+        {{
+          "@context": "https://schema.org/",
+          "@type": "Person",
+          name: "Douglas Natha Arias",
+        }}
       </script>
-
     </Head>
 
     <main>
@@ -25,25 +24,32 @@ const Home = () => (
       </p>
 
       <div className="grid">
-
         <div>
-        <script type="application/ld+json">
-            {
+          <script type="application/ld+json">
+            {{
               "@context": "https://schema.org",
               "@type": "Article",
-              "name": "Noticia Viernes 13 del Universo",
-              "description": "Viernes 13: Stephen King, el rey del terror, está interesado en escribir una novela sobre el psicópata enmascarado Jason Voorhees",
-              "author": "Douglas Natha",
-              "about": {
+              name: "Noticia Viernes 13 del Universo",
+              description:
+                "Viernes 13: Stephen King, el rey del terror, está interesado en escribir una novela sobre el psicópata enmascarado Jason Voorhees",
+              author: "Douglas Natha",
+              about: {
                 "@type": "Event",
-                "name": "Apple's March 21 Announcements"
+                name: "Apple's March 21 Announcements",
               },
-              "url": "https://www.eluniverso.com/entretenimiento/2020/06/17/nota/7875657/terror-stephen-king-idea-novela-jason-voorhees-viernes-13"
-            }
+              url:
+                "https://www.eluniverso.com/entretenimiento/2020/06/17/nota/7875657/terror-stephen-king-idea-novela-jason-voorhees-viernes-13",
+            }}
           </script>
-          <a href="https://www.eluniverso.com/entretenimiento/2020/06/17/nota/7875657/terror-stephen-king-idea-novela-jason-voorhees-viernes-13" className="card">
+          <a
+            href="https://www.eluniverso.com/entretenimiento/2020/06/17/nota/7875657/terror-stephen-king-idea-novela-jason-voorhees-viernes-13"
+            className="card"
+          >
             <h3>Noticia Viernes 13 del Universo</h3>
-            <p>Viernes 13: Stephen King, el rey del terror, está interesado en escribir una novela sobre el psicópata enmascarado Jason Voorhees</p>
+            <p>
+              Viernes 13: Stephen King, el rey del terror, está interesado en
+              escribir una novela sobre el psicópata enmascarado Jason Voorhees
+            </p>
           </a>
         </div>
 
@@ -65,9 +71,7 @@ const Home = () => (
           className="card"
         >
           <h3>Deploy &rarr;</h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with Vercel.
-          </p>
+          <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
         </a>
       </div>
     </main>
@@ -223,6 +227,6 @@ const Home = () => (
       }
     `}</style>
   </div>
-)
+);
 
-export default Home
+export default Home;
