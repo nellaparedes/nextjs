@@ -3,8 +3,18 @@ import Head from 'next/head'
 const Home = () => (
   <div className="container">
     <Head>
-      <title>Create Next Ap</title>
+      <title>Prueba de SEO JsonLD | EU</title>
       <link rel="icon" href="/favicon.ico" />
+      <script type="application/ld+json">
+
+      {
+        "@context": "http://schema.org/",
+        "@type": "Person",
+        "name": "Douglas Natha Arias",
+        "url": "http://manu.sporny.org/about/"
+      }
+      </script>
+
     </Head>
 
     <main>
@@ -17,10 +27,27 @@ const Home = () => (
       </p>
 
       <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+
+        <div>
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "name": "Noticia Viernes 13 del Universo",
+              "description": "Viernes 13: Stephen King, el rey del terror, está interesado en escribir una novela sobre el psicópata enmascarado Jason Voorhees",
+              "author": "Douglas Natha",
+              "about": {
+                "@type": "Event",
+                "name": "Apple's March 21 Announcements"
+              },
+              "url": "https://www.eluniverso.com/entretenimiento/2020/06/17/nota/7875657/terror-stephen-king-idea-novela-jason-voorhees-viernes-13"
+            }
+          </script>
+          <a href="https://www.eluniverso.com/entretenimiento/2020/06/17/nota/7875657/terror-stephen-king-idea-novela-jason-voorhees-viernes-13" className="card">
+            <h3>Noticia Viernes 13 del Universo</h3>
+            <p>Viernes 13: Stephen King, el rey del terror, está interesado en escribir una novela sobre el psicópata enmascarado Jason Voorhees</p>
+          </a>
+        </div>
 
         <a href="https://nextjs.org/learn" className="card">
           <h3>Learn &rarr;</h3>
